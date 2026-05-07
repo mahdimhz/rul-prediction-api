@@ -53,21 +53,22 @@ Prerequisites:
 | Requirement | Notes |
 | --- | --- |
 | Docker Desktop | Must be running before starting the API |
-| Model file | Place `xgb_rul_femto.pkl` inside `models/` |
+| Model file | Included at `models/xgb_rul_femto.pkl` |
 
 Clone the repository:
 
 ```bash
 git clone https://github.com/mahdimhz/rul-prediction-api.git
 cd rul-prediction-api
-mkdir -p models
 ```
 
-Place the trained model here:
+The repository includes the trained model bundle here:
 
 ```text
 models/xgb_rul_femto.pkl
 ```
+
+If you replace the model, keep the same bundle keys and feature contract documented above.
 
 Start the API:
 
@@ -224,7 +225,10 @@ rul-prediction-api/
 ├── tests/
 │   ├── __init__.py
 │   └── test_api.py
+├── .dockerignore
+├── .gitignore
 ├── Dockerfile
+├── LICENSE
 ├── docker-compose.yml
 ├── requirements.txt
 └── README.md
